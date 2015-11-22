@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>EvaTigrova.com</title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="./fancy/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="./fancy/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen"/>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="./fancy/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- fancy box script -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
+        });
+    </script>
+
+    <!-- arrow to top script -->
+    <script type="text/javascript">
+        $("#to_top").hide();
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $("#to_top").fadeIn();
+                } else {
+                    $("#to_top").fadeOut();
+                }
+            });
+            $("#to_top").click(function () {
+                $("body,html").animate({scrollTop: 0}, 800);
+                return false;
+            });
+            $("#margin").click(function () {
+                $("body,html").animate({scrollTop: 0}, 800);
+                return false;
+            });
+        });
+        function goto(href) {
+            location.href = href + '.html';
+        }
+    </script>
+
+    <!-- add style -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style/main/main.css"/>
+
+
+</head>
+<body>
+<!--<div id="margin">-->
+    <!---->
+<!--</div>-->
+<div class="all">
+    <!-- HEADER -->
+    <div class="row">
+        <div class="col-xs-3 col-md-3 navrow" id="index" onclick="goto(this.id)">
+            <a class="head" href="index.html">Home</a>
+        </div>
+        <div class="col-xs-3 col-md-3 navrow">
+            <a class="dropdown-toggle head" data-toggle="dropdown" role="button" aria-expanded="false">Portfolio <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a class="in-head" href="./wedding.html">
+                        <span class="in-head">wedding</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="in-head" href="./portrait.html">
+                        <span class="in-head">portrait </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="in-head" href="./beauty.html">
+                        <span class="in-head">beauty&fashion</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a class="in-head" href="./lovestory.html">
+                        <span class="in-head">lovestory</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="in-head" href="./family.html">
+                        <span class="in-head">family</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- dropdown end  -->
+        </div>
+        <div class="col-xs-3 col-md-3 navrow" id="price" onclick="goto(this.id)">
+            <a class="head" href="#">Price</a>
+        </div>
+        <div class="col-xs-3 col-md-3 dropdown navrow" id="contacts" onclick="goto(this.id)">
+            <a class="head" href="#">Contacts</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6 ">
+                <h1 class="titul">
+                    <a href="index.html">
+                        <img src="img/main/fff.png" width="320" alt=""/>
+                    </a>
+                </h1>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+    <!-- MAIN -->
+    <div class="main">
+        <div class="row">
+            <div class="col-md-12 big_img">
+                <img width="860px" alt="" src="img/main/1p.jpg"/>
+            </div>
+        </div>
+
+        <div id="to_top" style="position: fixed; right: 25px; bottom: 30px; width: 42px;  cursor: pointer;"
+             title="Вверх!">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="foot row">
+        <div class="col-xs-4 col-md-4">
+            <p>evatigrova23@gmail.com</p>
+        </div>
+        <div class="col-xs-4 col-md-4">
+            <a class="afooter" href="http://vk.com/eva_tigrova">
+                <img width="25px" alt="" src="./img/icons/04.jpg"/>
+            </a>
+            <a class="afooter" href="https://instagram.com/evatiger23/">
+                <img width="25px" alt="" src="./img/icons/01.jpg"/>
+            </a>
+        </div>
+        <div class="col-xs-4 col-md-4">
+            <p>80(29) 342-15-23</p>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
